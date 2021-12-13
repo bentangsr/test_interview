@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: UTF8
+  pool: 25
+  host: localhost
+  port: 5433
+
+development:
+  <<: *default
+  database: test_interview
+  username: bentang
+  password: bentang
+
+test:
+  <<: *default
+  database: test_interview_test
+  username: bentang
+  password: bentang
+
+production:
+  <<: *default
+  database: test_interview_dev
+  username: bentang
+  password: bentang
